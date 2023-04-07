@@ -39,7 +39,7 @@ clickhouse-client --host clickhouse-analytics-db --user default --password P@ssw
 * <http://localhost:8123/> - clickhouse бд аудита (логин: default пароль: P@ssw0rd)
 * <http://localhost:3000/> - grafana (логин: admin пароль: usr123)
 * <http://localhost:8124/> - clickhouse бд аналитическая (логин: default пароль: P@ssw0rd)
-* <http://localhost:8088/> - superset
+* <http://localhost:4200/> - superset (логин: admin пароль: c1ickh0u5e)
 
 4. Остановить выполнение Docker-образов
 
