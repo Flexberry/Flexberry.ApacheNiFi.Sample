@@ -44,6 +44,6 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"Flexberry_Flexberry.ApacheNiFi.Sample" /o:"flexberry" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          nuget restore "Flexberry.ApacheNiFi.Sample.sln" -NonInteractive
-          msbuild /verbosity:quiet /p:WarningLevel=0 /p:Configuration=Debug "Flexberry.ApacheNiFi.Sample.sln"
+          nuget restore "src/NiFiSample/NiFiSample.sln" -NonInteractive
+          msbuild /verbosity:quiet /p:WarningLevel=0 /p:Configuration=Debug "src/NiFiSample/NiFiSample.sln"
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
