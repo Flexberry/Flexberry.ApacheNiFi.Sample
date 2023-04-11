@@ -45,5 +45,5 @@ jobs:
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"Flexberry_Flexberry.ApacheNiFi.Sample" /o:"flexberry" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
           nuget restore "src/NiFiSample/NiFiSample.sln" -NonInteractive
-          msbuild /verbosity:quiet /p:WarningLevel=0 /p:Configuration=Debug "src/NiFiSample/NiFiSample.sln"
+          dotnet build /verbosity:quiet /p:WarningLevel=0 /p:Configuration=Debug "src/NiFiSample/NiFiSample.sln"
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
